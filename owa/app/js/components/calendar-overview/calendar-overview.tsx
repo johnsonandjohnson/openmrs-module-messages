@@ -60,6 +60,7 @@ class Calendar extends React.Component<ICalendarProps> {
           header={{ left: 'prev title next dayGridMonth,dayGridWeek,dayGridDay', center: '', right: '' }}
           events={this.props.events}
           datesRender={(info) => this.props.dateRangeChangedCallback(info.view.activeStart, info.view.activeEnd)}
+          locale = "fr"
           eventRender={(info) => {
             let eventContainer = info.el.firstChild!;
             if (info.event.extendedProps.isDisabled === true) {
