@@ -282,7 +282,6 @@ public final class DateUtil {
       final Calendar timePart =
           org.apache.commons.lang3.time.DateUtils.toCalendar(timeFormat.parse(timeOfDay));
       timePart.setTimeZone(timeZone);
-
       final Calendar result = org.apache.commons.lang3.time.DateUtils.toCalendar(date);
       result.setTimeZone(timeZone);
       result.set(Calendar.HOUR_OF_DAY, timePart.get(Calendar.HOUR_OF_DAY));
