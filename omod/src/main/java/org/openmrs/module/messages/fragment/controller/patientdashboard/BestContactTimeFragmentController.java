@@ -137,12 +137,12 @@ public class BestContactTimeFragmentController {
     } else if (person.isPatient()) {
       Patient patient = Context.getPatientService().getPatient(person.getId());
       String patientIdentifier = patient.getPatientIdentifier().getIdentifier();
-      return org.apache.commons.lang3.StringUtils.isNotBlank(patientIdentifier)
+      return StringUtils.isNotBlank(patientIdentifier)
           ? patientIdentifier
           : "";
     } else {
       String personIdentifier = getPersonIdentifier(person);
-      return org.apache.commons.lang3.StringUtils.isNotBlank(personIdentifier)
+      return StringUtils.isNotBlank(personIdentifier)
           ? personIdentifier
           : "";
     }
