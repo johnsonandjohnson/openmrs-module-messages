@@ -164,7 +164,7 @@ public class BestContactTimeFragmentController {
     PersonAttributeType type = null;
     String attributeTypeUUID =
         Context.getAdministrationService().getGlobalProperty(PERSON_IDENTIFIER_ATTRIBUTE_KEY);
-    if (org.apache.commons.lang3.StringUtils.isNotBlank(attributeTypeUUID)) {
+    if (StringUtils.isNotBlank(attributeTypeUUID)) {
       type = Context.getPersonService().getPersonAttributeTypeByUuid(attributeTypeUUID);
     }
     return type;
